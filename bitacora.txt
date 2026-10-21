@@ -13,4 +13,25 @@ ROL HTML: ARQUITECTURA
 ROL CSS: UI/UX
 ROL JS: NO USAREMOS Javascript ya que no implementaremos funcionalidades complejas con scripts
 
-//
+//DÍA 2
+===================================================
+TABLA DE RUTAS RELATIVAS (MiniReto 4 - Sitio v0.1)
+===================================================
+
+Origen: index.html (Raíz)
+---------------------------------------------------
+- Destino: Inicio            -> Ruta escrita: index.html
+- Destino: Tarifas y rutas   -> Ruta escrita: paginas/tarifas.html
+- Destino: Reservas          -> Ruta escrita: paginas/reservas.html
+
+Origen: paginas/tarifas.html (Subcarpeta paginas/)
+---------------------------------------------------
+- Destino: Inicio            -> Ruta escrita: ../index.html
+- Destino: Tarifas y rutas   -> Ruta escrita: tarifas.html
+- Destino: Reservas          -> Ruta escrita: reservas.html
+
+Origen: paginas/reservas.html (Subcarpeta paginas/)
+---------------------------------------------------
+- Destino: Inicio            -> Ruta escrita: ../index.html
+- Destino: Tarifas y rutas   -> Ruta escrita: tarifas.html
+- Destino: Reservas          -> Ruta escrita: reservas.html
