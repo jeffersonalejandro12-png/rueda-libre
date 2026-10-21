@@ -1,0 +1,16 @@
+// DÍA 1
+
+URL: jeffersonalejandro12-png.github.io/rueda-libre/
+HOST: 127.0.0.1:5500
+PROTOCOL: HTTP
+PUERTO: 
+RUTA: rueda-libre/index.html
+METODO DE PETICIÓN: 
+CÓDIGO DE ESTADO: 304
+CÓDIGO DE "/PROMOCIONES": 404 NOT FOUND (porque la página es inexistente)
+------------------------
+ROL HTML: ARQUITECTURA
+ROL CSS: UI/UX
+ROL JS: NO USAREMOS Javascript ya que no implementaremos funcionalidades complejas con scripts
+
+//
