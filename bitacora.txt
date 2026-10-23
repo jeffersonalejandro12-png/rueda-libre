@@ -14,24 +14,35 @@ ROL CSS: UI/UX
 ROL JS: NO USAREMOS Javascript ya que no implementaremos funcionalidades complejas con scripts
 
 //DÍA 2
-===================================================
-TABLA DE RUTAS RELATIVAS (MiniReto 4 - Sitio v0.1)
-===================================================
+MINIRETO 5: ESTRUCTURA SEMÁNTICA
 
-Origen: index.html (Raíz)
----------------------------------------------------
-- Destino: Inicio            -> Ruta escrita: index.html
-- Destino: Tarifas y rutas   -> Ruta escrita: paginas/tarifas.html
-- Destino: Reservas          -> Ruta escrita: paginas/reservas.html
+1. Esquema de regiones por página:
+- index.html:
+|header + nav
+|-main
+|--section banner
+|--section Quiénes somos?
+|--section Servicios
+|--Section Beneficios
+|--¿Cómo alquilar?
+|--section: id="encuentranos" Encuéntranos y contacto
+|footer: Información de cierre y copyright
 
-Origen: paginas/tarifas.html (Subcarpeta paginas/)
----------------------------------------------------
-- Destino: Inicio            -> Ruta escrita: ../index.html
-- Destino: Tarifas y rutas   -> Ruta escrita: tarifas.html
-- Destino: Reservas          -> Ruta escrita: reservas.html
+- paginas/tarifas.html:
+|header + nav
+|main
+|-Logo y título principal
+|-section Tabla de tarifas de alquiler
+|-section id="recorridos-guiados" (Tabla de recorridos guiados)
+|-aside (Información importante y lista de qué llevar)
+|footer
 
-Origen: paginas/reservas.html (Subcarpeta paginas/)
----------------------------------------------------
-- Destino: Inicio            -> Ruta escrita: ../index.html
-- Destino: Tarifas y rutas   -> Ruta escrita: tarifas.html
-- Destino: Reservas          -> Ruta escrita: reservas.html
+- paginas/reservas.html:
+|header + nav
+|-main
+|--Título principal y correo de contacto
+|--aside Horarios de atención con lista de definiciones
+|footer
+
+Justificación de elementos genéricos:
+- No se utilizaron etiquetas <div> ni <span> en ninguna de las tres páginas, ya que todas las agrupaciones de contenido se resolvieron de forma estricta mediante contenedores semánticos estándar del HTML5.
