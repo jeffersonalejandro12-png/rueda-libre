@@ -60,3 +60,17 @@ JUSTIFICACIÓN DE CONTROLES DEL FORMULARIO
    - Justificación: Se prefirieron los botones de opción (radio buttons) sobre las casillas de verificación (checkboxes) porque el usuario solo puede seleccionar exactamente una opción excluyente entre las rutas disponibles o la opción "Ninguno".
 
 -----------------------------------------------------
+TABLA DE PRUEBAS DE VALIDACIÓN NATIVA
+
+| Campo              | Dato de prueba     | Resultado esperado                 | Resultado obtenido                 |
+|--------------------|--------------------|------------------------------------|------------------------------------|
+| Nombre completo    | "Al"               | Rechaza (menor a 3 caracteres)     | Rechaza (bloquea envío con tooltip)|
+| Documento          | "12345"            | Rechaza (menos de 6 dígitos)       | Rechaza (patrón no coincide)       |
+| Documento          | "abc1234"          | Rechaza (contiene letras)          | Rechaza (patrón numérico estricto) |
+| Correo electrónico | "correo.com"       | Rechaza (falta el signo @)         | Rechaza (validador de tipo email)  |
+| Celular            | "1234567890"       | Rechaza (no empieza por 3)         | Rechaza (patrón regex inválido)    |
+| Celular            | "3001234567"       | Acepta (10 dígitos, empieza por 3) | Acepta correctamente               |
+| Fecha del alquiler | "2026-10-15"       | Rechaza (fuera de rango permitido) | Rechaza (fuera de min: 2026-11-01) |
+| Cantidad de bics.  | "7"                | Rechaza (supera el máximo de 6)    | Rechaza (supera max: 6)            |
+
+-----------------------------------------------------
