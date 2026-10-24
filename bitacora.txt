@@ -46,3 +46,17 @@ MINIRETO 5: ESTRUCTURA SEMÁNTICA
 
 Justificación de elementos genéricos:
 - No se utilizaron etiquetas <div> ni <span> en ninguna de las tres páginas, ya que todas las agrupaciones de contenido se resolvieron de forma estricta mediante contenedores semánticos estándar del HTML5.
+
+------------------------------------------------------
+JUSTIFICACIÓN DE CONTROLES DEL FORMULARIO
+
+1. Campo "Fecha del alquiler" (<input type="date">):
+   - Justificación: Se eligió el tipo "date" en lugar de un campo de texto libre para forzar un formato estricto de calendario, evitando errores de digitación de los usuarios y asegurando que el sistema reciba la fecha estandarizada (AAAA-MM-DD).
+
+2. Campo "Tipo de bicicleta" (<select>):
+   - Justificación: Al existir un conjunto cerrado y finito de opciones válidas (urbana, montaña, eléctrica), el menú desplegable previene que el usuario ingrese opciones inventadas o erróneas, garantizando consistencia en el procesamiento de datos del alquiler.
+
+3. Campo "Recorrido guiado" (<input type="radio">):
+   - Justificación: Se prefirieron los botones de opción (radio buttons) sobre las casillas de verificación (checkboxes) porque el usuario solo puede seleccionar exactamente una opción excluyente entre las rutas disponibles o la opción "Ninguno".
+
+-----------------------------------------------------
