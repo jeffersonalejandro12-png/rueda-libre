@@ -36,6 +36,22 @@ main {
     box-shadow: 0 4px 12px rgba(20, 33, 61, 0.05);
     margin-bottom: 4rem; /* Espacio para que el botón flotante no tape el final */
 }
+main img, article img {
+    border-radius: 8px;
+    box-shadow: 0 6px 16px rgba(20, 33, 61, 0.08);
+    transition: transform 0.3s ease;
+}
+
+article:hover img {
+    transform: scale(1.02);
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+}
 
 .portada-inicio {
     min-height: 60vh;
