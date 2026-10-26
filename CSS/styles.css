@@ -1,0 +1,63 @@
+:root {
+    --verde-ruta: #1E7A4F;
+    --naranja-pedal: #F39A2B;
+    --azul-noche: #14213D;
+    --crema: #FAF6EF;
+    --gris-asfalto: #5B6470;
+
+    --font-titulo: 'Montserrat', sans-serif;
+    --font-texto: 'Open Sans', sans-serif;
+
+    --espacio-sm: 0.5rem;
+    --espacio-md: 1rem;
+    --espacio-lg: 2rem;
+}
+
+body {
+    font-family: var(--font-texto);
+    color: var(--gris-asfalto);
+    background-color: var(--crema);
+    margin: 0;
+    padding: var(--espacio-lg);
+    line-height: 1.6;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-titulo);
+    color: var(--azul-noche);
+    margin-top: var(--espacio-lg);
+    margin-bottom: var(--espacio-md);
+}
+
+/* ===================================================
+   ENLACES Y COMPONENTES CON COLORES APROBADOS
+   =================================================== */
+a {
+    color: var(--verde-ruta);
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+header {
+    background-color: var(--azul-noche);
+    color: var(--crema);
+    padding: var(--espacio-md);
+    margin-bottom: var(--espacio-lg);
+    border-radius: 4px;
+}
+
+header a {
+    color: var(--crema);
+}
+
+footer {
+    background-color: var(--azul-noche);
+    color: var(--crema);
+    text-align: center;
+    padding: var(--espacio-md);
+    margin-top: var(--espacio-lg);
+    border-radius: 4px;
+}
