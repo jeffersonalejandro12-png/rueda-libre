@@ -58,3 +58,52 @@ footer {
     margin-top: var(--espacio-lg);
     border-radius: 4px;
 }
+
+#menu a {
+    color: var(--gris-asfalto);
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+#menu a.activo {
+    color: var(--verde-ruta);
+    font-weight: 600;
+}
+
+#menu a:hover {
+    color: var(--verde-ruta);
+    text-decoration: underline;
+}
+
+#menu a:focus {
+    outline: 2px solid var(--verde-ruta);
+    outline-offset: 2px;
+    color: var(--verde-ruta);
+}
+
+.btn-cta {
+    display: inline-block;
+    background-color: var(--verde-ruta);
+    color: #FFFFFF;
+    padding: var(--espacio-sm) var(--espacio-md);
+    border-radius: 4px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: background-color 0.2s ease;
+}
+
+.btn-cta:hover {
+    background-color: #155838;
+    text-decoration: none;
+}
+
+.btn-cta:focus {
+    outline: 3px solid var(--azul-noche);
+    outline-offset: 2px;
+}
+
+input:focus, select:focus, textarea:focus {
+    outline: 2px solid var(--verde-ruta);
+    outline-offset: 2px;
+    border-color: var(--verde-ruta);
+}
