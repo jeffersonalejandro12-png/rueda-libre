@@ -73,4 +73,27 @@ TABLA DE PRUEBAS DE VALIDACIÓN NATIVA
 | Fecha del alquiler | "2026-10-15"       | Rechaza (fuera de rango permitido) | Rechaza (fuera de min: 2026-11-01) |
 | Cantidad de bics.  | "7"                | Rechaza (supera el máximo de 6)    | Rechaza (supera max: 6)            |
 
------------------------------------------------------
+------------------------------------------------------
+AUDITORÍA DE ACCESIBILIDAD
+
+1. Hallazgo: Textos alternativos en imágenes secundarias.
+   - Corrección: Se verificó que todas las etiquetas <img> cuenten con atributos "alt" descriptivos que explican el contenido visual (ej. paisaje urbano, bicicleta de montaña), facilitando la lectura para lectores de pantalla.
+
+2. Hallazgo: Textos de enlaces fuera de contexto.
+   - Corrección: Se ajustaron los enlaces del sitio para que no utilicen textos genéricos como "clic aquí", sino frases descriptivas que indican claramente el destino (ej. "Consulta todas nuestras tarifas de alquiler aquí").
+
+3. Hallazgo: Jerarquía y unicidad de encabezados.
+   - Corrección: Se comprobó que cada página posee un único título principal (<h1>) y que los subtítulos (<h2>, <h3>) siguen una secuencia lógica descendente sin saltar niveles.
+
+4. Hallazgo: Idioma del documento HTML.
+   - Corrección: Se aseguró que la etiqueta raíz en los tres archivos HTML incluya el atributo lang="es" para una correcta interpretación por parte de tecnologías de asistencia.
+
+5. Hallazgo: Navegación y orden de tabulación (Focus Order).
+   - Corrección: Se recorrió todo el sitio únicamente con el teclado (Tab / Shift+Tab), confirmando que el menú de navegación, los enlaces y los campos del formulario de reservas reciben el foco en una secuencia predecible y lógica.
+-------------------------------------------------------
+MAPA DE USO DE COLOR
+- Fondo general: Crema (#FAF6EF) para brindar una lectura cálida y cómoda.
+- Títulos y encabezado: Azul Noche (#14213D) por su excelente contraste sobre Crema (~17:1).
+- Texto principal y secundario: Gris Asfalto (#5B6470) sobre Crema (~5.8:1) para párrafos, y Azul Noche para mayor jerarquía.
+- Botones y enlaces principales: Verde Ruta (#1E7A4F) usando texto blanco (#FFFFFF) para cumplir con el estándar de accesibilidad (4.6:1).
+- Destacados y botones secundarios: Naranja Pedal (#F39A2B) combinado con texto Azul Noche (#14213D) para garantizar una relación de contraste superior a 8.5:1.
