@@ -17,7 +17,7 @@
     box-sizing: border-box;
 }
 
-/* ESTILOS GENERALES Y CONTENEDOR PRINCIPAL */
+
 body {
     font-family: var(--font-texto);
     color: var(--gris-asfalto);
@@ -34,6 +34,7 @@ main {
     background-color: #FFFFFF;
     border-radius: 8px;
     box-shadow: 0 4px 12px rgba(20, 33, 61, 0.05);
+    margin-bottom: 4rem; /* Espacio para que el botón flotante no tape el final */
 }
 
 .portada-inicio {
@@ -43,7 +44,7 @@ main {
     justify-content: center;
 }
 
-/* ENCABEZADOS Y NAVEGACIÓN (MENÚ EN FILA) */
+
 h1, h2, h3, h4, h5, h6 {
     font-family: var(--font-titulo);
     color: var(--azul-noche);
@@ -94,7 +95,7 @@ header {
     outline-offset: 2px;
 }
 
-/* TARJETAS DE SERVICIOS */
+
 article {
     background-color: var(--crema);
     border: 1px solid #D8D2C5;
@@ -110,14 +111,12 @@ article img {
     margin-top: var(--espacio-sm);
 }
 
-/* Imágenes generales en secciones */
 section img {
     max-width: 100%;
     height: auto;
     border-radius: 6px;
 }
 
-/* ESTILOS DE TABLAS */
 table {
     width: 100%;
     border-collapse: collapse;
@@ -144,7 +143,7 @@ th {
     font-family: var(--font-titulo);
 }
 
-/* FORMULARIO ORGANIZADO */
+
 form fieldset {
     margin-bottom: var(--espacio-lg);
     padding: var(--espacio-lg);
@@ -186,7 +185,7 @@ form textarea {
     background-color: #FFFFFF;
 }
 
-/* BOTONES Y ENLACES CTA */
+
 .btn-cta {
     display: inline-block;
     background-color: var(--verde-ruta);
@@ -235,7 +234,30 @@ input:focus, select:focus, textarea:focus {
     border-color: var(--verde-ruta);
 }
 
-/* PIE DE PÁGINA (FOOTER) */
+.whatsapp-flotante {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #25D366;
+    color: #FFFFFF;
+    padding: 0.75rem 1.25rem;
+    border-radius: 50px;
+    font-weight: 700;
+    text-decoration: none;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    z-index: 1000;
+    transition: background-color 0.2s ease;
+}
+
+.whatsapp-flotante:hover {
+    background-color: #1EBE5D;
+}
+
+.whatsapp-flotante:focus {
+    outline: 3px solid var(--azul-noche);
+    outline-offset: 2px;
+}
+
 footer {
     background-color: var(--azul-noche);
     color: var(--crema);
