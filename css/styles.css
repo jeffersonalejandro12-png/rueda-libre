@@ -78,7 +78,6 @@ header {
     margin-bottom: var(--espacio-md);
     border-radius: 6px;
 
-    /* Mobile-First: Apilado verticalmente en pantallas pequeñas */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -139,14 +138,91 @@ header h1 {
 }
 
 /* ===================================================
-   4. SECCIONES Y CONTENEDORES (Móvil por defecto)
+   4. PORTADA / HERO PRINCIPAL (Sombra lateral)
    =================================================== */
 .portada-inicio {
+    background-image: 
+        linear-gradient(
+            to right, 
+            rgba(20, 33, 61, 0.95) 0%, 
+            rgba(20, 33, 61, 0.75) 45%, 
+            rgba(20, 33, 61, 0.1) 85%,
+            transparent 100%
+        ), 
+        url('../img/hero-portada-v2.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    
+    color: var(--crema);
+    border-radius: 12px;
+    padding: var(--espacio-lg);
+    margin-bottom: var(--espacio-lg);
+    min-height: 70vh;
     display: flex;
-    flex-direction: column;
-    gap: var(--espacio-md);
+    align-items: center;
+    justify-content: flex-start;
+    box-shadow: 0 10px 30px rgba(20, 33, 61, 0.15);
 }
 
+.portada-contenido {
+    max-width: 550px;
+    text-align: left;
+}
+
+.badge-hero {
+    display: inline-block;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    color: var(--naranja-pedal);
+    text-transform: uppercase;
+    margin-bottom: var(--espacio-sm);
+}
+
+.portada-contenido h1 {
+    font-size: 2.2rem;
+    font-family: var(--font-titulo);
+    color: #FFFFFF;
+    line-height: 1.1;
+    margin-top: 0;
+    margin-bottom: var(--espacio-md);
+}
+
+.portada-contenido p {
+    color: #D8D2C5;
+    font-size: 1rem;
+    margin-bottom: var(--espacio-lg);
+    line-height: 1.6;
+}
+
+.portada-botones {
+    display: flex;
+    flex-direction: column;
+    gap: var(--espacio-sm);
+}
+
+.btn-secundario {
+    display: inline-block;
+    background-color: transparent;
+    color: var(--crema);
+    border: 1px solid rgba(250, 246, 239, 0.4);
+    padding: var(--espacio-sm) var(--espacio-md);
+    border-radius: 4px;
+    font-weight: 600;
+    text-align: center;
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+
+.btn-secundario:hover {
+    border-color: var(--naranja-pedal);
+    color: var(--naranja-pedal);
+}
+
+/* ===================================================
+   5. SECCIONES Y CUADRÍCULAS (Servicios, Rutas, Flota)
+   =================================================== */
 .page-header {
     margin-bottom: var(--espacio-md);
     padding-bottom: var(--espacio-sm);
@@ -164,33 +240,16 @@ header h1 {
     font-size: 0.95rem;
 }
 
-.page-header-banner {
-    display: flex;
-    flex-direction: column;
-    gap: var(--espacio-md);
-    margin-bottom: var(--espacio-md);
-    padding-bottom: var(--espacio-md);
-    border-bottom: 2px solid var(--crema);
-}
-
-.page-header-texto h1 {
-    margin-top: 0;
-    font-size: 1.5rem;
-}
-
-.banner-img {
-    max-height: 200px;
-}
-
-/* Cuadrículas móviles (1 sola columna) */
-.rutas-grid, .flota-grid {
+/* Grids móviles por defecto (1 columna) */
+.rutas-grid, .flota-grid, .servicios-grid {
     display: grid;
     grid-template-columns: 1fr;
     gap: var(--espacio-md);
     margin-top: var(--espacio-md);
 }
 
-article, .ruta-card, .tarjeta-flota {
+/* Tarjetas base */
+article, .ruta-card, .tarjeta-flota, .tarjeta-servicio {
     background-color: var(--crema);
     border: 1px solid #D8D2C5;
     border-radius: 8px;
@@ -200,6 +259,70 @@ article, .ruta-card, .tarjeta-flota {
     flex-direction: column;
 }
 
+/* Estilos de Tarjeta de Servicios */
+.tarjeta-servicio {
+    overflow: hidden;
+    padding: 0;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.tarjeta-servicio:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 16px rgba(20, 33, 61, 0.08);
+}
+
+.tarjeta-servicio img {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+    border-radius: 0;
+    box-shadow: none;
+    margin: 0;
+}
+
+.servicio-contenido {
+    padding: var(--espacio-md);
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.tarjeta-servicio h3 {
+    font-size: 1.15rem;
+    color: var(--azul-noche);
+    margin-top: 0;
+    margin-bottom: var(--espacio-sm);
+}
+
+.tarjeta-servicio p {
+    color: var(--gris-asfalto);
+    font-size: 0.9rem;
+    margin-bottom: var(--espacio-md);
+    flex-grow: 1;
+}
+
+.enlace-card {
+    font-weight: 600;
+    color: var(--verde-ruta);
+    text-decoration: none;
+    font-size: 0.9rem;
+    margin-top: auto;
+    transition: color 0.2s ease;
+}
+
+.enlace-card:hover {
+    color: var(--azul-noche);
+    text-decoration: underline;
+}
+
+.detalle-static {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--naranja-pedal);
+    margin-top: auto;
+}
+
+/* Tarjetas de Flota y Rutas */
 article img, .ruta-card img, .tarjeta-flota img {
     width: 100%;
     height: 160px;
@@ -211,12 +334,6 @@ article img, .ruta-card img, .tarjeta-flota img {
 .ruta-card h3, .tarjeta-flota h3 {
     font-size: 1.1rem;
     margin: 0 0 var(--espacio-sm) 0;
-}
-
-.nivel-badge {
-    font-size: 0.85rem;
-    font-weight: 600;
-    color: var(--verde-ruta);
 }
 
 .tarjeta-flota p {
@@ -238,13 +355,107 @@ article img, .ruta-card img, .tarjeta-flota img {
     margin-top: auto;
 }
 
-.seccion-flota {
+/* Badges de Dificultad para Rutas */
+.nivel-badge {
+    display: inline-block;
+    font-size: 0.85rem;
+    font-weight: 600;
+    padding: 0.25rem 0.5rem;
+    border-radius: 4px;
+    margin-top: auto;
+    width: fit-content;
+}
+
+.nivel-facil {
+    background-color: rgba(30, 122, 79, 0.1);
+    color: var(--verde-ruta);
+}
+
+.nivel-medio {
+    background-color: rgba(243, 154, 43, 0.15);
+    color: #D37B10;
+}
+
+.nivel-dificil {
+    background-color: rgba(20, 33, 61, 0.1);
+    color: var(--azul-noche);
+}
+
+/* ===================================================
+   6. SECCIÓN ¿CÓMO ALQUILAR? (Pasos)
+   =================================================== */
+.seccion-proceso {
     margin-top: var(--espacio-lg);
     margin-bottom: var(--espacio-lg);
 }
 
+.proceso-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--espacio-lg);
+    align-items: center;
+    margin-top: var(--espacio-md);
+}
+
+.pasos-lista {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: var(--espacio-md);
+}
+
+.paso-item {
+    background-color: var(--crema);
+    border: 1px solid #D8D2C5;
+    border-radius: 8px;
+    padding: var(--espacio-md);
+    display: flex;
+    align-items: flex-start;
+    gap: var(--espacio-md);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.paso-item:hover {
+    transform: translateX(4px);
+    box-shadow: 0 4px 12px rgba(20, 33, 61, 0.05);
+}
+
+.paso-numero {
+    font-family: var(--font-titulo);
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--verde-ruta);
+    background-color: rgba(30, 122, 79, 0.1);
+    padding: 0.25rem 0.75rem;
+    border-radius: 6px;
+    line-height: 1;
+}
+
+.paso-item h3 {
+    font-size: 1.05rem;
+    color: var(--azul-noche);
+    margin: 0 0 0.25rem 0;
+}
+
+.paso-item p {
+    color: var(--gris-asfalto);
+    font-size: 0.9rem;
+    margin: 0;
+}
+
+.proceso-imagen img {
+    width: 100%;
+    height: 100%;
+    min-height: 320px;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 8px 24px rgba(20, 33, 61, 0.1);
+}
+
 /* ===================================================
-   5. TABLAS (Optimizadas para móvil)
+   7. TABLAS Y FORMULARIOS (Móvil)
    =================================================== */
 table {
     width: 100%;
@@ -273,9 +484,6 @@ th {
     font-family: var(--font-titulo);
 }
 
-/* ===================================================
-   6. FORMULARIOS Y BOTONES (Móvil)
-   =================================================== */
 form fieldset {
     margin-bottom: var(--espacio-md);
     padding: var(--espacio-md);
@@ -363,7 +571,7 @@ input:focus, select:focus, textarea:focus {
 }
 
 /* ===================================================
-   7. ELEMENTOS FLOTANTES Y PIE DE PÁGINA (Móvil)
+   8. ELEMENTOS FLOTANTES Y PIE DE PÁGINA (Móvil)
    =================================================== */
 .whatsapp-flotante {
     position: fixed;
@@ -402,11 +610,6 @@ footer {
     text-align: center;
 }
 
-.footer-bloque {
-    flex: 1;
-    min-width: 200px;
-}
-
 .footer-bloque h3 {
     color: var(--crema);
     margin-top: 0;
@@ -422,7 +625,7 @@ footer {
 
 
 /* ===================================================
-   8. MEDIA QUERY: TABLET (min-width: 768px)
+   9. MEDIA QUERY: TABLET (min-width: 768px)
    =================================================== */
 @media (min-width: 768px) {
     body {
@@ -433,7 +636,6 @@ footer {
         padding: var(--espacio-lg);
     }
 
-    /* El header recupera la distribución horizontal (logo izq, menú der) */
     header {
         flex-direction: row;
         justify-content: space-between;
@@ -447,8 +649,11 @@ footer {
         gap: var(--espacio-lg);
     }
 
-    /* La flota y las rutas pasan a 2 columnas en tablet */
     .rutas-grid, .flota-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .servicios-grid {
         grid-template-columns: repeat(2, 1fr);
     }
 
@@ -460,19 +665,21 @@ footer {
         padding: var(--espacio-md);
     }
 
-    /* La fila doble del formulario pasa a estar en línea horizontal */
     .fila-doble {
         flex-direction: row;
         gap: var(--espacio-md);
         margin-bottom: var(--espacio-md);
     }
 
-    .page-header-banner {
+    .portada-botones {
         flex-direction: row;
-        align-items: center;
+        gap: var(--espacio-md);
     }
 
-    /* El footer se distribuye en fila horizontal */
+    .btn-cta, .btn-secundario {
+        width: auto;
+    }
+
     footer {
         flex-direction: row;
         justify-content: space-between;
@@ -483,248 +690,26 @@ footer {
 
 
 /* ===================================================
-   9. MEDIA QUERY: ESCRITORIO (min-width: 1200px)
+   10. MEDIA QUERY: ESCRITORIO INTERMEDIO (min-width: 992px)
+   =================================================== */
+@media (min-width: 992px) {
+    .proceso-grid {
+        grid-template-columns: 1.1fr 0.9fr;
+        gap: var(--espacio-lg);
+    }
+}
+
+
+/* ===================================================
+   11. MEDIA QUERY: ESCRITORIO GRANDE (min-width: 1200px)
    =================================================== */
 @media (min-width: 1200px) {
-    /* Limitamos el ancho máximo y centramos los contenedores principales */
     main, header, footer {
         max-width: 65rem;
         margin-left: auto;
         margin-right: auto;
     }
 
-    /* 1. Portada de inicio en dos columnas (Grid) */
-    .portada-inicio {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        align-items: center;
-        gap: var(--espacio-lg);
-        min-height: 55vh;
-    }
-
-    /* 2. Galería de rutas fija en 3 columnas */
-    .rutas-grid {
-        grid-template-columns: repeat(3, 1fr);
-    }
-
-    /* 3. Flota de bicicletas ampliada a 4 columnas en escritorios grandes */
-    .flota-grid {
-        grid-template-columns: repeat(4, 1fr);
-    }
-
-    /* 4. Layout de reservas asimétrico (2:1) */
-    .main-reservas-grid {
-        display: grid;
-        grid-template-columns: 2fr 1fr;
-        gap: var(--espacio-lg);
-        max-width: 75rem;
-        margin: 0 auto;
-    }
-
-    .page-header h1, .page-header-texto h1 {
-        font-size: 2rem;
-    }
-
-    /* Los botones del formulario vuelven a su ancho natural en escritorio */
-    .btn-cta, button[type="submit"] {
-        width: auto;
-    }
-}
-/* ===================================================
-   SECCIÓN NUESTROS SERVICIOS (TARJETAS VISUALES)
-   =================================================== */
-.seccion-servicios {
-    margin-top: var(--espacio-lg);
-    margin-bottom: var(--espacio-lg);
-}
-
-.servicios-grid {
-    display: grid;
-    grid-template-columns: 1fr; /* Móvil por defecto: 1 columna */
-    gap: var(--espacio-md);
-    margin-top: var(--espacio-md);
-}
-
-.tarjeta-servicio {
-    background-color: var(--crema);
-    border: 1px solid #D8D2C5;
-    border-radius: 8px;
-    overflow: hidden; /* Mantiene la imagen contenida en las esquinas */
-    display: flex;
-    flex-direction: column;
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-
-.tarjeta-servicio:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 6px 16px rgba(20, 33, 61, 0.08);
-}
-
-.tarjeta-servicio img {
-    width: 100%;
-    height: 160px;
-    object-fit: cover;
-    border-radius: 0;
-    box-shadow: none;
-    margin: 0;
-}
-
-.servicio-contenido {
-    padding: var(--espacio-md);
-    display: flex;
-    flex-direction: column;
-    flex-grow: 1; /* Distribuye el espacio vertical de manera uniforme */
-}
-
-.tarjeta-servicio h3 {
-    font-size: 1.15rem;
-    color: var(--azul-noche);
-    margin-top: 0;
-    margin-bottom: var(--espacio-sm);
-}
-
-.tarjeta-servicio p {
-    color: var(--gris-asfalto);
-    font-size: 0.9rem;
-    margin-bottom: var(--espacio-md);
-    flex-grow: 1;
-}
-
-.enlace-card {
-    font-weight: 600;
-    color: var(--verde-ruta);
-    text-decoration: none;
-    font-size: 0.9rem;
-    margin-top: auto; /* Ancla siempre el enlace al final de la tarjeta */
-    transition: color 0.2s ease;
-}
-
-.enlace-card:hover {
-    color: var(--azul-noche);
-    text-decoration: underline;
-}
-
-.detalle-static {
-    font-size: 0.85rem;
-    font-weight: 600;
-    color: var(--naranja-pedal);
-    margin-top: auto;
-}
-
-/* ===================================================
-   ADAPTABILIDAD RESPONSIVE (Servicios)
-   =================================================== */
-@media (min-width: 768px) {
-    .servicios-grid {
-        grid-template-columns: repeat(2, 1fr); /* Tablet: 2 columnas */
-    }
-}
-
-@media (min-width: 1200px) {
-    .servicios-grid {
-        grid-template-columns: repeat(3, 1fr); /* Escritorio: 3 columnas perfectamente equilibradas */
-    }
-}
-
-/* ===================================================
-   PORTADA / HERO (SOMBRA LATERAL DE IZQUIERDA A DERECHA)
-   =================================================== */
-.portada-inicio.hero-sombra-lateral {
-    /* La imagen de fondo sin capas de color uniforme, solo sombra negra/azul en gradiente lateral */
-    background-image: 
-        linear-gradient(
-            to right, 
-            rgba(0, 0, 0, 0) 0%, 
-            rgba(0, 0, 0, 0) 45%, 
-            rgba(0, 0, 0, 0) 85%,
-            transparent 100%
-        ), 
-        url('../img/hero-portada.jpeg');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    
-    color: var(--crema);
-    border-radius: 12px;
-    padding: var(--espacio-lg);
-    margin-bottom: var(--espacio-lg);
-    min-height: 70vh; /* Altura prominente */
-    display: flex;
-    align-items: center;
-    justify-content: flex-start; /* Alinea todo estrictamente a la izquierda */
-    box-shadow: 0 10px 30px rgba(20, 33, 61, 0.15);
-}
-
-.portada-contenido {
-    max-width: 550px; /* Asegura que el texto se mantenga dentro de la zona sombreada */
-    text-align: left;
-}
-
-.badge-hero {
-    display: inline-block;
-    font-size: 0.75rem;
-    font-weight: 700;
-    letter-spacing: 1.5px;
-    color: var(--naranja-pedal);
-    text-transform: uppercase;
-    margin-bottom: var(--espacio-sm);
-}
-
-.portada-contenido h1 {
-    font-size: 2.2rem;
-    font-family: var(--font-titulo);
-    color: #FFFFFF;
-    line-height: 1.1;
-    margin-top: 0;
-    margin-bottom: var(--espacio-md);
-}
-
-.portada-contenido p {
-    color: #D8D2C5;
-    font-size: 1rem;
-    margin-bottom: var(--espacio-lg);
-    line-height: 1.6;
-}
-
-.portada-botones {
-    display: flex;
-    flex-direction: column;
-    gap: var(--espacio-sm);
-}
-
-.btn-secundario {
-    display: inline-block;
-    background-color: transparent;
-    color: var(--crema);
-    border: 1px solid rgba(250, 246, 239, 0.4);
-    padding: var(--espacio-sm) var(--espacio-md);
-    border-radius: 4px;
-    font-weight: 600;
-    text-align: center;
-    text-decoration: none;
-    transition: all 0.2s ease;
-}
-
-.btn-secundario:hover {
-    border-color: var(--naranja-pedal);
-    color: var(--naranja-pedal);
-}
-
-/* ===================================================
-   ADAPTABILIDAD RESPONSIVE (Escritorio)
-   =================================================== */
-@media (min-width: 768px) {
-    .portada-botones {
-        flex-direction: row;
-        gap: var(--espacio-md);
-    }
-
-    .btn-cta, .btn-secundario {
-        width: auto;
-    }
-}
-
-@media (min-width: 1200px) {
     .portada-inicio.hero-sombra-lateral {
         padding: 4.5rem;
         min-height: 60vh;
@@ -741,288 +726,32 @@ footer {
     .portada-contenido p {
         font-size: 1.1rem;
     }
-}
 
-.portada-contenido {
-    max-width: 100%;
-}
-
-.badge-hero {
-    display: inline-block;
-    font-size: 0.75rem;
-    font-weight: 700;
-    letter-spacing: 1.5px;
-    color: var(--naranja-pedal);
-    text-transform: uppercase;
-    margin-bottom: var(--espacio-sm);
-}
-
-.portada-contenido h1 {
-    font-size: 2.2rem;
-    font-family: var(--font-titulo);
-    color: #FFFFFF;
-    line-height: 1.1;
-    margin-top: 0;
-    margin-bottom: var(--espacio-md);
-}
-
-.portada-contenido p {
-    color: #D8D2C5;
-    font-size: 1rem;
-    margin-bottom: var(--espacio-lg);
-    line-height: 1.6;
-}
-
-.portada-botones {
-    display: flex;
-    flex-direction: column;
-    gap: var(--espacio-sm);
-}
-
-.btn-secundario {
-    display: inline-block;
-    background-color: transparent;
-    color: var(--crema);
-    border: 1px solid rgba(250, 246, 239, 0.3);
-    padding: var(--espacio-sm) var(--espacio-md);
-    border-radius: 4px;
-    font-weight: 600;
-    text-align: center;
-    text-decoration: none;
-    transition: all 0.2s ease;
-}
-
-.btn-secundario:hover {
-    border-color: var(--naranja-pedal);
-    color: var(--naranja-pedal);
-}
-
-/* Ajustes para pantalla grande */
-@media (min-width: 1200px) {
-    .portada-inicio.hero-overlay {
-        padding: 4rem;
-        min-height: 60vh;
+    .servicios-grid {
+        grid-template-columns: repeat(3, 1fr);
     }
 
-    .portada-contenido {
-        max-width: 600px; /* Limita el ancho del texto en escritorio */
+    .rutas-grid {
+        grid-template-columns: repeat(3, 1fr);
     }
 
-    .portada-contenido h1 {
-        font-size: 3.2rem;
+    .flota-grid {
+        grid-template-columns: repeat(4, 1fr);
     }
 
-    .portada-botones {
-        flex-direction: row;
-        gap: var(--espacio-md);
-    }
-
-    .btn-cta, .btn-secundario {
-        width: auto;
-    }
-}
-
-.badge-hero {
-    display: inline-block;
-    font-size: 0.75rem;
-    font-weight: 700;
-    letter-spacing: 1.5px;
-    color: var(--naranja-pedal);
-    text-transform: uppercase;
-    margin-bottom: var(--espacio-sm);
-}
-
-.portada-contenido h1 {
-    font-size: 2.2rem;
-    font-family: var(--font-titulo);
-    color: #FFFFFF;
-    line-height: 1.1;
-    margin-top: 0;
-    margin-bottom: var(--espacio-md);
-}
-
-.portada-contenido p {
-    color: #D8D2C5;
-    font-size: 1rem;
-    margin-bottom: var(--espacio-lg);
-    line-height: 1.6;
-}
-
-.portada-botones {
-    display: flex;
-    flex-direction: column;
-    gap: var(--espacio-sm);
-}
-
-.btn-secundario {
-    display: inline-block;
-    background-color: transparent;
-    color: var(--crema);
-    border: 1px solid rgba(250, 246, 239, 0.3);
-    padding: var(--espacio-sm) var(--espacio-md);
-    border-radius: 4px;
-    font-weight: 600;
-    text-align: center;
-    text-decoration: none;
-    transition: all 0.2s ease;
-}
-
-.btn-secundario:hover {
-    border-color: var(--naranja-pedal);
-    color: var(--naranja-pedal);
-}
-
-.portada-imagen-container img {
-    width: 100%;
-    height: 240px;
-    object-fit: cover;
-    border-radius: 8px;
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
-}
-
-/* ===================================================
-   MEDIA QUERY: ESCRITORIO (min-width: 1200px)
-   =================================================== */
-@media (min-width: 1200px) {
-    .portada-inicio {
+    .main-reservas-grid {
         display: grid;
-        grid-template-columns: 1.1fr 0.9fr;
-        align-items: center;
-        padding: 3.5rem;
-        gap: 3rem;
-    }
-
-    .portada-contenido h1 {
-        font-size: 3.2rem;
-    }
-
-    .portada-contenido p {
-        font-size: 1.1rem;
-        max-width: 90%;
-    }
-
-    .portada-botones {
-        flex-direction: row;
-        align-items: center;
-        gap: var(--espacio-md);
-    }
-
-    .btn-cta, .btn-secundario {
-        width: auto;
-        padding: 0.75rem 1.5rem;
-    }
-
-    .portada-imagen-container img {
-        height: 380px;
-    }
-}
-/* ===================================================
-   BADGES DE NIVEL PARA RUTAS GUIADAS
-   =================================================== */
-.nivel-badge {
-    display: inline-block;
-    font-size: 0.85rem;
-    font-weight: 600;
-    padding: 0.25rem 0.5rem;
-    border-radius: 4px;
-    margin-top: auto;
-    width: fit-content;
-}
-
-/* Modificadores según la dificultad con toque sutil */
-.nivel-facil {
-    background-color: rgba(30, 122, 79, 0.1);
-    color: var(--verde-ruta);
-}
-
-.nivel-medio {
-    background-color: rgba(243, 154, 43, 0.15);
-    color: #D37B10; /* Un naranja un poco más profundo para mejor contraste */
-}
-
-.nivel-dificil {
-    background-color: rgba(20, 33, 61, 0.1);
-    color: var(--azul-noche);
-}
-/* ===================================================
-   SECCIÓN ¿CÓMO ALQUILAR? (PASOS INTEGRADOS)
-   =================================================== */
-.seccion-proceso {
-    margin-top: var(--espacio-lg);
-    margin-bottom: var(--espacio-lg);
-}
-
-.proceso-grid {
-    display: grid;
-    grid-template-columns: 1fr; /* Móvil: una columna */
-    gap: var(--espacio-lg);
-    align-items: center;
-    margin-top: var(--espacio-md);
-}
-
-.pasos-lista {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    flex-direction: column;
-    gap: var(--espacio-md);
-}
-
-.paso-item {
-    background-color: var(--crema);
-    border: 1px solid #D8D2C5;
-    border-radius: 8px;
-    padding: var(--espacio-md);
-    display: flex;
-    align-items: flex-start;
-    gap: var(--espacio-md);
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-
-.paso-item:hover {
-    transform: translateX(4px);
-    box-shadow: 0 4px 12px rgba(20, 33, 61, 0.05);
-}
-
-.paso-numero {
-    font-family: var(--font-titulo);
-    font-size: 1.5rem;
-    font-weight: 700;
-    color: var(--verde-ruta);
-    background-color: rgba(30, 122, 79, 0.1);
-    padding: 0.25rem 0.75rem;
-    border-radius: 6px;
-    line-height: 1;
-}
-
-.paso-item h3 {
-    font-size: 1.05rem;
-    color: var(--azul-noche);
-    margin: 0 0 0.25rem 0;
-}
-
-.paso-item p {
-    color: var(--gris-asfalto);
-    font-size: 0.9rem;
-    margin: 0;
-}
-
-.proceso-imagen img {
-    width: 100%;
-    height: 100%;
-    min-height: 320px;
-    object-fit: cover;
-    border-radius: 8px;
-    box-shadow: 0 8px 24px rgba(20, 33, 61, 0.1);
-}
-
-/* ===================================================
-   ADAPTABILIDAD RESPONSIVE (Proceso / ¿Cómo alquilar?)
-   =================================================== */
-@media (min-width: 992px) {
-    .proceso-grid {
-        grid-template-columns: 1.1fr 0.9fr; /* Escritorio: 2 columnas equilibradas */
+        grid-template-columns: 2fr 1fr;
         gap: var(--espacio-lg);
+        max-width: 75rem;
+        margin: 0 auto;
+    }
+
+    .page-header h1, .page-header-texto h1 {
+        font-size: 2rem;
+    }
+
+    .btn-cta, button[type="submit"] {
+        width: auto;
     }
 }
