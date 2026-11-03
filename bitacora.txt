@@ -97,3 +97,11 @@ MAPA DE USO DE COLOR
 - Texto principal y secundario: Gris Asfalto (#5B6470) sobre Crema (~5.8:1) para párrafos, y Azul Noche para mayor jerarquía.
 - Botones y enlaces principales: Verde Ruta (#1E7A4F) usando texto blanco (#FFFFFF) para cumplir con el estándar de accesibilidad (4.6:1).
 - Destacados y botones secundarios: Naranja Pedal (#F39A2B) combinado con texto Azul Noche (#14213D) para garantizar una relación de contraste superior a 8.5:1.
+-------------------------------------------------------
+Actualización MINIRETO 2 - Semana 2
+- Actualicé el logo y su disposición en el header para una visualización más profesional
+- Actualicé las imágenes para que haya más variedad junto con una mejor lógica, por el momento sigo usando "flota bicicletas" como placeholder para seguir avanzando en la estructura.
+- Un error muy básico con el que tropecé un par de veces fue en copiar y pegar código ignorando cosas como "../" para hacer referencia a páginas madre ya que no funciona igual la lógica de disposición como en la página Index.
+- He estado aplicando el grid de manera responsive sin problemas significativos
+- Han habido grandes retrasos principalmente por la dispocición de una estancia fija de trabajo desde la cual seguir desarrollando el código.
+-------------------------------------------------------

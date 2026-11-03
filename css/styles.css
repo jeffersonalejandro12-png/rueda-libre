@@ -120,6 +120,46 @@ header h1 {
     font-size: 1.05rem;
 }
 
+/* ===================================================
+   BANNER DE CABECERA PARA PÁGINAS INTERNAS
+   =================================================== */
+.page-header-banner {
+    display: flex;
+    align-items: center;
+    gap: var(--espacio-lg);
+    margin-bottom: var(--espacio-lg);
+    padding-bottom: var(--espacio-lg);
+    border-bottom: 2px solid var(--crema);
+    flex-wrap: wrap;
+}
+
+.page-header-texto {
+    flex: 1;
+    min-width: 280px;
+}
+
+.page-header-texto h1 {
+    margin-top: 0;
+    margin-bottom: var(--espacio-sm);
+    font-size: 2rem;
+    color: var(--azul-noche);
+}
+
+.page-header-texto p {
+    margin: 0;
+    color: var(--gris-asfalto);
+    font-size: 1.05rem;
+}
+
+.banner-img {
+    flex: 1;
+    min-width: 280px;
+    max-height: 250px;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(20, 33, 61, 0.1);
+}
+
 #menu {
     list-style: none;
     padding: 0;
@@ -177,6 +217,66 @@ section img {
     height: auto;
     border-radius: 6px;
 }
+
+
+.seccion-flota {
+    margin-top: var(--espacio-lg);
+    margin-bottom: var(--espacio-lg);
+}
+
+.flota-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: var(--espacio-md);
+    margin-top: var(--espacio-md);
+}
+
+.tarjeta-flota {
+    background-color: var(--crema);
+    border: 1px solid #D8D2C5;
+    border-radius: 8px;
+    padding: var(--espacio-md);
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.tarjeta-flota img {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+    border-radius: 6px;
+    margin-bottom: var(--espacio-sm);
+}
+
+.tarjeta-flota h3 {
+    font-size: 1.2rem;
+    color: var(--azul-noche);
+    margin-top: 0;
+    margin-bottom: var(--espacio-sm);
+}
+
+.tarjeta-flota p {
+    color: var(--gris-asfalto);
+    font-size: 0.95rem;
+    margin-bottom: var(--espacio-md);
+    flex-grow: 1; 
+}
+
+.tarjeta-flota .precio {
+    font-weight: 700;
+    color: var(--verde-ruta);
+    font-size: 1.05rem;
+    margin-bottom: var(--espacio-md);
+}
+
+.tarjeta-flota .btn-cta {
+    text-align: center;
+    margin-top: auto; 
+}
+
 
 table {
     width: 100%;
