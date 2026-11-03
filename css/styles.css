@@ -91,7 +91,7 @@ header {
 }
 
 header img.logo-header {
-    height: 50px;
+    height: 80px;
     width: auto;
     object-fit: contain;
 }
@@ -832,3 +832,4 @@ footer {
         grid-template-columns: repeat(2, 1fr); /* Tablet y Escritorio: 2 columnas simétricas */
     }
 }
+
