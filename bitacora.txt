@@ -116,3 +116,21 @@ Actualización MINIRETO 4 - Semana 2
 - Usé la Gemini AI para dar orden a tantas iteraciones de código y agilizar el proceso de desarrollo.
 - El hero section tuvo una evolución significativa, pasé de tener una estructura HTML dividida en dos bloques dentro del contenedor principal con un "Display" a tener todo unificado en un contenedor llamado ".portada-inicio" haciendo que la fotografía (editada para mayor legibilidad) fuera una nueva propiedad dentro del CSS. También añadí un gradiente azúl oscuro en rgba para mejorar aún más la estética visual.
 -------------------------------------------------------
+Actualización MINIRETO 5 - Semana 2
+- Invertí 3 horas en total incluyendo investigación pruebas e implementación
+- No desarrollé toda la página principal sino la sección de flota
+- Me sorprendió todo lo que pude hacer con bootstrap sin una sola linea de css ya que tenía una idea errada de cómo funcionaba el framework
+- Noté que en la documentación de bootstrap se abusa del "div" y se descuida la semántica HTML, cuando noté esto empecé a corregir lo que me terminó alargando el tiempo de trabajo.
+- Honestamente sigue sin agradarme demasiado el framework ya que siento que aporta una estética de plantilla pero no se puede negar que agiliza bastante los procesos y supongo que aún más cuando uno se acostumbra a trabajar con su etiquetado.
+-------------------------------------------------------
+Actualización MINIRETO 6 - Semana 2
+### Clases consultadas en la documentación oficial y su función:
+1. g-4: Define el espaciado simétrico (*gutter*) horizontal y vertical entre los elementos hijos de una retícula (row), manteniendo una separación limpia y fluida sin desbordamientos.
+2. flex-column flex-md-row: Controla el comportamiento responsivo del contenedor flexible (d-flex). Por defecto en celulares organiza los elementos en columna vertical (flex-column), y a partir del breakpoint "md" (768px) los reorganiza en una fila horizontal (flex-md-row).
+3. d-none d-md-block: Gestiona la visibilidad condicional. Oculta por completo el elemento decorativo en pantallas pequeñas (d-none) y lo muestra como un bloque estructurado (d-md-block) únicamente a partir de pantallas medianas en adelante.
+4. align-items-md-center: Alinea verticalmente al centro los elementos dentro de un contenedor flexible, activándose de forma específica a partir del punto de quiebre `md`.
+5. px-4 py-3: Aplica relleno interno (*padding*) tipográfico y de espaciado. px-4 define el espacio horizontal (eje X) y py-3 el espacio vertical (eje Y), permitiendo estilizar el enlace destacado como un bloque sólido sin recurrir al componente ".btn".
+
+### Conclusión del Mini-Reto:
+Se comprobó la alta capacidad expresiva de las clases utilitarias de Bootstrap 5.3 para resolver problemas complejos de maquetación, alineamiento y responsividad sin alterar la capa de estilos nativos del proyecto. Todo listo para proceder con el commit y push al repositorio.
+
