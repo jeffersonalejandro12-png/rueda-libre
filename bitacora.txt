@@ -108,3 +108,11 @@ Actualización MINIRETO 2 - Semana 2
 Actualización MINIRETO 3 - Semana 2
 - Para avanzar a mayor velocidad estoy obviando algunas cosas sencillas como la visualización de links y botones, luego pensaremos en eso, primero estoy centrado en continuar con la estructura y requisitos principales que plantea Rueda Libre}
 -------------------------------------------------------
+Actualización MINIRETO 4 - Semana 2
+- Para este punto decidí mejorar varias secciones, entre ellas la parte de "Encuentranos" dandole un diseño de tarjetas y ofreciendo acciones claras
+- Mejoré el hero section con un gradiente, recorte de la imagen de fondo y simplificación del copy.
+- Me di la licencia de agregar un par de colores que no estaban dentro del branding de la marca pero que se ven bien ya que son algo funcional para determinar "fácil, medio y difícil"
+- Añadí imagenes para dar mayor entendimiento sobre "Nuestros servicios".
+- Usé la Gemini AI para dar orden a tantas iteraciones de código y agilizar el proceso de desarrollo.
+- El hero section tuvo una evolución significativa, pasé de tener una estructura HTML dividida en dos bloques dentro del contenedor principal con un "Display" a tener todo unificado en un contenedor llamado ".portada-inicio" haciendo que la fotografía (editada para mayor legibilidad) fuera una nueva propiedad dentro del CSS. También añadí un gradiente azúl oscuro en rgba para mejorar aún más la estética visual.
+-------------------------------------------------------
