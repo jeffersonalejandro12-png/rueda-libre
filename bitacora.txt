@@ -133,4 +133,4 @@ Actualización MINIRETO 6 - Semana 2
 
 ### Conclusión del Mini-Reto:
 Se comprobó la alta capacidad expresiva de las clases utilitarias de Bootstrap 5.3 para resolver problemas complejos de maquetación, alineamiento y responsividad sin alterar la capa de estilos nativos del proyecto. Todo listo para proceder con el commit y push al repositorio.
-
+--------------------------------------------------------
